@@ -12,8 +12,8 @@ Functions:
 
 from typing import List, Optional
 from sqlalchemy.orm import Session
-from models import Issue
-from schemas import IssueCreate, IssueUpdate
+from app.db.models import Issue
+from app.schemas.schemas import IssueCreate, IssueUpdate
 
 
 def create_issue(db: Session, issue: IssueCreate) -> Issue:
