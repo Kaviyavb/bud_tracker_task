@@ -78,7 +78,7 @@ def update_existing_issue(issue_id: int, issue: IssueUpdate, db: Session = Depen
         raise
 
 
-# ✅ Delete Issue
+# Delete Issue
 @router.delete("/issues/{issue_id}", status_code=204)
 def delete_existing_issue(issue_id: int, db: Session = Depends(get_db)):
     logger.info(f"Deleting issue {issue_id}")
@@ -96,7 +96,7 @@ def delete_existing_issue(issue_id: int, db: Session = Depends(get_db)):
         raise
 
 
-# ✅ Health Check
+# Health Check
 @router.get("/health")
 def health_check():
     logger.info("Health check requested")
