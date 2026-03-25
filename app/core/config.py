@@ -14,12 +14,6 @@ from dotenv import load_dotenv
 
 # Load environment variables from .env file
 load_dotenv()
-
-
-class Settings:
-    """Application settings loaded from environment variables."""
-
-
 class Settings:
     """Application settings loaded from environment variables."""
 

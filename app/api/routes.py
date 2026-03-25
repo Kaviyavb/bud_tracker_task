@@ -16,7 +16,7 @@ from app.services.crud import (
 router = APIRouter()
 
 
-# ✅ Create Issue
+#  Create Issue
 @router.post("/issues", response_model=IssueResponse, status_code=201)
 def create_new_issue(issue: IssueCreate, db: Session = Depends(get_db)):
     logger.info(f"Creating new issue: {issue.title}")
@@ -29,7 +29,7 @@ def create_new_issue(issue: IssueCreate, db: Session = Depends(get_db)):
         raise
 
 
-# ✅ Get All Issues
+# Get All Issues
 @router.get("/issues", response_model=List[IssueResponse])
 def read_issues(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     logger.info(f"Fetching issues: skip={skip}, limit={limit}")
@@ -42,7 +42,7 @@ def read_issues(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
         raise
 
 
-# ✅ Get Single Issue
+#Get Single Issue
 @router.get("/issues/{issue_id}", response_model=IssueResponse)
 def read_issue(issue_id: int, db: Session = Depends(get_db)):
     logger.info(f"Fetching issue with ID: {issue_id}")
@@ -60,7 +60,7 @@ def read_issue(issue_id: int, db: Session = Depends(get_db)):
         raise
 
 
-# ✅ Update Issue
+#Update Issue
 @router.put("/issues/{issue_id}", response_model=IssueResponse)
 def update_existing_issue(issue_id: int, issue: IssueUpdate, db: Session = Depends(get_db)):
     logger.info(f"Updating issue {issue_id}")
