@@ -50,3 +50,24 @@ NoneType: None
 2026-03-25 10:05:50,846 - root - WARNING - Issue not found for deletion: 2
 2026-03-25 10:05:50,847 - root - WARNING - HTTP Exception: 404 - Issue not found - Path: /api/v1/issues/2
 2026-03-25 10:07:13,509 - root - INFO - Shutting down Bug Tracker API
+2026-03-25 10:11:30,638 - root - INFO - Starting Bug Tracker API
+2026-03-25 10:11:30,638 - root - INFO - Database URL: sqlite:///./bugtracker.db
+2026-03-25 10:11:30,638 - root - INFO - Log file: logs/app.log
+2026-03-25 10:11:30,640 - root - INFO - Database tables created/verified
+2026-03-25 10:15:20,213 - root - INFO - Starting Bug Tracker API
+2026-03-25 10:15:20,213 - root - INFO - Database URL: sqlite:///./bugtracker.db
+2026-03-25 10:15:20,213 - root - INFO - Log file: logs/app.log
+2026-03-25 10:15:20,232 - root - INFO - Database tables created/verified
+2026-03-25 10:15:42,543 - root - INFO - Starting Bug Tracker API
+2026-03-25 10:15:42,543 - root - INFO - Database URL: sqlite:///./bugtracker.db
+2026-03-25 10:15:42,543 - root - INFO - Log file: logs/app.log
+2026-03-25 10:15:42,545 - root - INFO - Database tables created/verified
+2026-03-25 10:16:12,665 - root - INFO - Fetching issues: skip=0, limit=100
+2026-03-25 10:16:12,670 - root - INFO - Retrieved 0 issues
+2026-03-25 10:16:23,008 - root - INFO - Creating new issue: Login button not working
+2026-03-25 10:16:23,018 - root - INFO - Issue created in database: 1
+2026-03-25 10:16:23,018 - root - INFO - Issue created successfully with ID: 1
+2026-03-25 10:16:48,592 - root - INFO - Creating new issue: Register button not working
+2026-03-25 10:16:48,600 - root - INFO - Issue created in database: 2
+2026-03-25 10:16:48,601 - root - INFO - Issue created successfully with ID: 2
+2026-03-25 10:18:03,342 - root - INFO - Shutting down Bug Tracker API

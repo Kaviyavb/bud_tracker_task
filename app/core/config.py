@@ -3,10 +3,21 @@ Configuration settings for the FastAPI Bug Tracker application.
 
 Centralized configuration to avoid hardcoding values.
 Uses environment variables with defaults.
+Loads .env file if present.
 """
 
 import os
 from pathlib import Path
+
+from dotenv import load_dotenv
+
+
+# Load environment variables from .env file
+load_dotenv()
+
+
+class Settings:
+    """Application settings loaded from environment variables."""
 
 
 class Settings:
