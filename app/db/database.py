@@ -11,16 +11,17 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 from sqlalchemy.pool import StaticPool
 
+from app.core.config import settings
+
 # ============================================================================
 # DATABASE CONFIGURATION
 # ============================================================================
-SQLALCHEMY_DATABASE_URL = "sqlite:///./bugtracker.db"
 engine = create_engine(
-    SQLALCHEMY_DATABASE_URL,
+    settings.DATABASE_URL,
     connect_args={
         "check_same_thread": False
     },
-   
+    poolclass=StaticPool,
 )
 SessionLocal = sessionmaker(
     autocommit=False,
@@ -29,7 +30,13 @@ SessionLocal = sessionmaker(
 )
 
 Base = declarative_base()
+
+
 def get_db() -> Generator:
+    """
+    Dependency to get database session.
+    Yields a database session and ensures it's closed after use.
+    """
     db = SessionLocal()
     try:
         yield db

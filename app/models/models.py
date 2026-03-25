@@ -8,7 +8,8 @@ Models:
 - Issue: Represents a bug or issue in the tracking system
 """
 
-from sqlalchemy import Column, Integer, String 
+from datetime import datetime
+from sqlalchemy import Column, DateTime, Integer, String
 from app.db.database import Base
 
 
@@ -42,11 +43,30 @@ class Issue(Base):
         String(50),
         nullable=False,
         doc="Issue status: Open, In Progress, Closed",
-        default ="open"
+        default="Open"
+    )
+    reporter_email = Column(
+        String(255),
+        nullable=False,
+        index=True,
+        doc="Email address of the person reporting the issue"
+    )
+    created_at = Column(
+        DateTime,
+        nullable=False,
+        default=datetime.utcnow,
+        doc="Timestamp when the issue was created"
+    )
+    updated_at = Column(
+        DateTime,
+        nullable=True,
+        onupdate=datetime.utcnow,
+        doc="Timestamp when the issue was last updated"
     )
 
     def __repr__(self) -> str:
         return (
             f"<Issue(id={self.id}, title='{self.title}', "
-            f"priority='{self.priority}', status='{self.status}')>"
+            f"priority='{self.priority}', status='{self.status}', "
+            f"reporter_email='{self.reporter_email}')>"
         )

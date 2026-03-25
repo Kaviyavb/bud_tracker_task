@@ -1,0 +1,52 @@
+2026-03-25 09:51:29,080 - root - INFO - Starting Bug Tracker API
+2026-03-25 09:51:29,081 - root - INFO - Database URL: sqlite:///./bugtracker.db
+2026-03-25 09:51:29,081 - root - INFO - Log file: C:\Users\Kaviyasri.venkatesan\OneDrive - Agilisium Consulting India Private Limited\Documents\bug_tracker_task\logs\app.log
+2026-03-25 09:51:29,088 - root - INFO - Database tables created/verified
+2026-03-25 09:51:57,489 - root - INFO - Starting Bug Tracker API
+2026-03-25 09:51:57,489 - root - INFO - Database URL: sqlite:///./bugtracker.db
+2026-03-25 09:51:57,489 - root - INFO - Log file: C:\Users\Kaviyasri.venkatesan\OneDrive - Agilisium Consulting India Private Limited\Documents\bug_tracker_task\logs\app.log
+2026-03-25 09:51:57,490 - root - INFO - Database tables created/verified
+2026-03-25 09:53:35,016 - root - WARNING - Validation Error: [{'type': 'value_error', 'loc': ('body', 'reporter_email'), 'msg': 'value is not a valid email address: An email address must have an @-sign.', 'input': 'usergmail.com', 'ctx': {'reason': 'An email address must have an @-sign.'}}] - Path: /api/v1/issues
+2026-03-25 09:53:38,761 - root - WARNING - Validation Error: [{'type': 'value_error', 'loc': ('body', 'reporter_email'), 'msg': 'value is not a valid email address: An email address must have an @-sign.', 'input': 'usergmail.com', 'ctx': {'reason': 'An email address must have an @-sign.'}}] - Path: /api/v1/issues
+2026-03-25 09:53:54,092 - root - INFO - Creating new issue: Login button not working
+2026-03-25 09:53:54,096 - root - ERROR - Failed to create issue in database: (sqlite3.OperationalError) table issues has no column named reporter_email
+[SQL: INSERT INTO issues (title, description, priority, status, reporter_email, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('Login button not working', 'When clicking the login button, nothing happens...', 'High', 'Open', 'user@gmail.com', '2026-03-25 04:23:54.095622', None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-25 09:53:54,097 - root - ERROR - Failed to create issue: (sqlite3.OperationalError) table issues has no column named reporter_email
+[SQL: INSERT INTO issues (title, description, priority, status, reporter_email, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('Login button not working', 'When clicking the login button, nothing happens...', 'High', 'Open', 'user@gmail.com', '2026-03-25 04:23:54.095622', None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-25 09:53:54,098 - root - ERROR - Database Error: (sqlite3.OperationalError) table issues has no column named reporter_email
+[SQL: INSERT INTO issues (title, description, priority, status, reporter_email, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('Login button not working', 'When clicking the login button, nothing happens...', 'High', 'Open', 'user@gmail.com', '2026-03-25 04:23:54.095622', None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8) - Path: /api/v1/issues
+NoneType: None
+2026-03-25 09:57:28,401 - root - INFO - Shutting down Bug Tracker API
+2026-03-25 09:58:48,544 - root - INFO - Shutting down Bug Tracker API
+2026-03-25 09:58:49,683 - root - INFO - Starting Bug Tracker API
+2026-03-25 09:58:49,683 - root - INFO - Database URL: sqlite:///./bugtracker.db
+2026-03-25 09:58:49,684 - root - INFO - Log file: C:\Users\Kaviyasri.venkatesan\OneDrive - Agilisium Consulting India Private Limited\Documents\bug_tracker_task\logs\app.log
+2026-03-25 09:58:49,685 - root - INFO - Database tables created/verified
+2026-03-25 09:59:46,595 - root - INFO - Starting Bug Tracker API
+2026-03-25 09:59:46,595 - root - INFO - Database URL: sqlite:///./bugtracker.db
+2026-03-25 09:59:46,595 - root - INFO - Log file: C:\Users\Kaviyasri.venkatesan\OneDrive - Agilisium Consulting India Private Limited\Documents\bug_tracker_task\logs\app.log
+2026-03-25 09:59:46,617 - root - INFO - Database tables created/verified
+2026-03-25 10:01:29,568 - root - INFO - Creating new issue: register button not working
+2026-03-25 10:01:29,583 - root - INFO - Issue created in database: 1
+2026-03-25 10:01:29,583 - root - INFO - Issue created successfully with ID: 1
+2026-03-25 10:01:31,966 - root - INFO - Creating new issue: register button not working
+2026-03-25 10:01:31,978 - root - INFO - Issue created in database: 2
+2026-03-25 10:01:31,978 - root - INFO - Issue created successfully with ID: 2
+2026-03-25 10:04:52,054 - root - INFO - Creating new issue: login button not working
+2026-03-25 10:04:52,063 - root - INFO - Issue created in database: 3
+2026-03-25 10:04:52,063 - root - INFO - Issue created successfully with ID: 3
+2026-03-25 10:05:30,932 - root - INFO - Fetching issues: skip=0, limit=100
+2026-03-25 10:05:30,934 - root - INFO - Retrieved 3 issues
+2026-03-25 10:05:48,030 - root - INFO - Deleting issue 2
+2026-03-25 10:05:48,044 - root - INFO - Issue deleted from database: 2
+2026-03-25 10:05:48,044 - root - INFO - Issue deleted successfully: 2
+2026-03-25 10:05:50,845 - root - INFO - Deleting issue 2
+2026-03-25 10:05:50,846 - root - WARNING - Issue not found for deletion: 2
+2026-03-25 10:05:50,847 - root - WARNING - HTTP Exception: 404 - Issue not found - Path: /api/v1/issues/2
+2026-03-25 10:07:13,509 - root - INFO - Shutting down Bug Tracker API
