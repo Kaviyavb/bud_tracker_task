@@ -13,15 +13,7 @@ from app.core.config import settings
 
 
 def setup_logging():
-    """
-    Configure logging for the application.
 
-    Sets up:
-    - File handler with rotation
-    - Console handler for development
-    - Proper formatting
-    - Log levels
-    """
     # Create logs directory if it doesn't exist
     log_dir = os.path.dirname(settings.LOG_FILE_PATH)
     os.makedirs(log_dir, exist_ok=True)

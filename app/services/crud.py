@@ -20,19 +20,7 @@ from app.schemas.schemas import IssueCreate, IssueUpdate
 
 
 def create_issue(db: Session, issue: IssueCreate) -> Issue:
-    """
-    Create a new issue in the database.
-
-    Args:
-        db: Database session
-        issue: Issue creation data
-
-    Returns:
-        Created Issue object
-
-    Raises:
-        Exception: If database operation fails
-    """
+   
     try:
         db_issue = Issue(**issue.model_dump(exclude_unset=True))
         db.add(db_issue)
@@ -47,17 +35,7 @@ def create_issue(db: Session, issue: IssueCreate) -> Issue:
 
 
 def get_issues(db: Session, skip: int = 0, limit: int = 100) -> List[Issue]:
-    """
-    Retrieve issues from the database with pagination.
-
-    Args:
-        db: Database session
-        skip: Number of records to skip
-        limit: Maximum number of records to return
-
-    Returns:
-        List of Issue objects
-    """
+   
     try:
         issues = db.query(Issue).offset(skip).limit(limit).all()
         logger.debug(f"Retrieved {len(issues)} issues from database")
@@ -68,16 +46,7 @@ def get_issues(db: Session, skip: int = 0, limit: int = 100) -> List[Issue]:
 
 
 def get_issue_by_id(db: Session, issue_id: int) -> Optional[Issue]:
-    """
-    Retrieve a specific issue by ID.
-
-    Args:
-        db: Database session
-        issue_id: Issue identifier
-
-    Returns:
-        Issue object if found, None otherwise
-    """
+  
     try:
         issue = db.query(Issue).filter(Issue.id == issue_id).first()
         if issue:
@@ -91,20 +60,7 @@ def get_issue_by_id(db: Session, issue_id: int) -> Optional[Issue]:
 
 
 def update_issue(db: Session, issue_id: int, issue: IssueUpdate) -> Optional[Issue]:
-    """
-    Update an existing issue.
-
-    Args:
-        db: Database session
-        issue_id: Issue identifier
-        issue: Issue update data
-
-    Returns:
-        Updated Issue object if found, None otherwise
-
-    Raises:
-        Exception: If database operation fails
-    """
+  
     try:
         db_issue = db.query(Issue).filter(Issue.id == issue_id).first()
         if not db_issue:
@@ -127,19 +83,7 @@ def update_issue(db: Session, issue_id: int, issue: IssueUpdate) -> Optional[Iss
 
 
 def delete_issue(db: Session, issue_id: int) -> bool:
-    """
-    Delete an issue from the database.
-
-    Args:
-        db: Database session
-        issue_id: Issue identifier
-
-    Returns:
-        True if deleted, False if not found
-
-    Raises:
-        Exception: If database operation fails
-    """
+   
     try:
         db_issue = db.query(Issue).filter(Issue.id == issue_id).first()
         if not db_issue:

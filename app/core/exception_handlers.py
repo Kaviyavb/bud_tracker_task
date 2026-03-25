@@ -8,14 +8,11 @@ from fastapi import HTTPException, Request
 from fastapi.responses import JSONResponse
 from pydantic import ValidationError
 from sqlalchemy.exc import SQLAlchemyError
-
+from fastapi import status
 from app.core.logging_config import logger
 
 
 def http_exception_handler(request: Request, exc: HTTPException):
-    """
-    Handle HTTP exceptions with consistent response format.
-    """
     logger.warning(
         f"HTTP Exception: {exc.status_code} - {exc.detail} - Path: {request.url.path}"
     )
@@ -34,15 +31,13 @@ def http_exception_handler(request: Request, exc: HTTPException):
 
 
 def validation_exception_handler(request: Request, exc: ValidationError):
-    """
-    Handle Pydantic validation errors with detailed field information.
-    """
+    
     logger.warning(
         f"Validation Error: {exc.errors()} - Path: {request.url.path}"
     )
 
     return JSONResponse(
-        status_code=422,
+        status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
         content={
             "success": False,
             "message": "Validation error",
@@ -55,16 +50,14 @@ def validation_exception_handler(request: Request, exc: ValidationError):
 
 
 def sqlalchemy_exception_handler(request: Request, exc: SQLAlchemyError):
-    """
-    Handle database-related exceptions.
-    """
+
     logger.error(
         f"Database Error: {str(exc)} - Path: {request.url.path}",
         exc_info=True
     )
 
     return JSONResponse(
-        status_code=500,
+        status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
         content={
             "success": False,
             "message": "Database error occurred",
@@ -77,16 +70,14 @@ def sqlalchemy_exception_handler(request: Request, exc: SQLAlchemyError):
 
 
 def general_exception_handler(request: Request, exc: Exception):
-    """
-    Handle any unhandled exceptions.
-    """
+
     logger.error(
         f"Unexpected Error: {str(exc)} - Path: {request.url.path}",
         exc_info=True
     )
 
     return JSONResponse(
-        status_code=500,
+        status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
         content={
             "success": False,
             "message": "An unexpected error occurred",

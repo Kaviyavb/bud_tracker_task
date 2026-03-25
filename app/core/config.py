@@ -47,7 +47,7 @@ class Settings:
     API_PREFIX: str = os.getenv("API_PREFIX", "")
     API_V1_STR: str = os.getenv("API_V1_STR", "/api/v1")
 
-    # CORS (if needed in future)
+    # CORS 
     BACKEND_CORS_ORIGINS: list = os.getenv(
         "BACKEND_CORS_ORIGINS",
         ["http://localhost:3000", "http://localhost:8080"]

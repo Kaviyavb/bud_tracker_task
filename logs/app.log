@@ -91,3 +91,34 @@ NoneType: None
 2026-03-25 10:39:43,138 - root - INFO - Database URL: sqlite:///./bugtracker.db
 2026-03-25 10:39:43,138 - root - INFO - Log file: logs/app.log
 2026-03-25 10:39:43,140 - root - INFO - Database tables created/verified
+2026-03-25 11:46:45,794 - root - INFO - Shutting down Bug Tracker API
+2026-03-25 11:46:47,810 - root - INFO - Starting Bug Tracker API
+2026-03-25 11:46:47,811 - root - INFO - Database URL: sqlite:///./bugtracker.db
+2026-03-25 11:46:47,811 - root - INFO - Log file: logs/app.log
+2026-03-25 11:46:47,813 - root - INFO - Database tables created/verified
+2026-03-25 11:52:54,165 - root - INFO - Shutting down Bug Tracker API
+2026-03-25 11:52:55,600 - root - INFO - Starting Bug Tracker API
+2026-03-25 11:52:55,600 - root - INFO - Database URL: sqlite:///./bugtracker.db
+2026-03-25 11:52:55,600 - root - INFO - Log file: logs/app.log
+2026-03-25 11:52:55,602 - root - INFO - Database tables created/verified
+2026-03-25 12:10:22,108 - root - INFO - Shutting down Bug Tracker API
+2026-03-25 12:10:23,280 - root - INFO - Starting Bug Tracker API
+2026-03-25 12:10:23,281 - root - INFO - Database URL: sqlite:///./bugtracker.db
+2026-03-25 12:10:23,281 - root - INFO - Log file: logs/app.log
+2026-03-25 12:10:23,282 - root - INFO - Database tables created/verified
+2026-03-25 12:16:35,861 - root - INFO - Shutting down Bug Tracker API
+2026-03-25 12:16:36,750 - root - INFO - Starting Bug Tracker API
+2026-03-25 12:16:36,750 - root - INFO - Database URL: sqlite:///./bugtracker.db
+2026-03-25 12:16:36,750 - root - INFO - Log file: logs/app.log
+2026-03-25 12:16:36,752 - root - INFO - Database tables created/verified
+2026-03-25 12:18:07,424 - root - INFO - Shutting down Bug Tracker API
+2026-03-25 12:18:08,392 - root - INFO - Starting Bug Tracker API
+2026-03-25 12:18:08,392 - root - INFO - Database URL: sqlite:///./bugtracker.db
+2026-03-25 12:18:08,392 - root - INFO - Log file: logs/app.log
+2026-03-25 12:18:08,394 - root - INFO - Database tables created/verified
+2026-03-25 12:21:24,113 - root - INFO - Shutting down Bug Tracker API
+2026-03-25 12:21:25,086 - root - INFO - Starting Bug Tracker API
+2026-03-25 12:21:25,086 - root - INFO - Database URL: sqlite:///./bugtracker.db
+2026-03-25 12:21:25,086 - root - INFO - Log file: logs/app.log
+2026-03-25 12:21:25,088 - root - INFO - Database tables created/verified
+2026-03-25 12:25:50,010 - root - INFO - Shutting down Bug Tracker API
